@@ -1,4 +1,4 @@
-# Eight-queens
+# N-queens
 
 This is the simplest, cleanest and easiest-to-understand solution I can come up in one night. 
 
