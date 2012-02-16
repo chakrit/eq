@@ -1,9 +1,9 @@
 default: profile
-profile: both
+profile: clean both
 	@echo ------
-	time bin/eq-naive
+	@time bin/eq-naive
 	@echo ------
-	time bin/eq-fast
+	@time bin/eq-fast
 	@echo ------
 	@echo Done.
 both: naive fast
@@ -15,3 +15,6 @@ fast:
 	mkdir -p obj bin
 	gcc -fPIC -c -DFAST -o obj/eq-fast.o src/eq.c
 	gcc -o bin/eq-fast obj/eq-fast.o
+clean:
+	@echo Removing ./obj ./bin ...
+	-rm -R obj bin
