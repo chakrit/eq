@@ -1,11 +1,11 @@
 default: profile
 profile: both
-	echo ------
+	@echo ------
 	time bin/eq-naive
-	echo ------
+	@echo ------
 	time bin/eq-fast
-	echo ------
-	echo Done.
+	@echo ------
+	@echo Done.
 both: naive fast
 naive:
 	mkdir -p obj bin
